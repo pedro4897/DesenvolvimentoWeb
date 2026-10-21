@@ -1,15 +1,15 @@
 <h3>Faça seu login</h3>
 
-<div class="alert alert-danger">
-  <strong>Verifique!</strong> Email ou senha invalidos.
+<div class="alert alert-danger" *ngIf="mensagem.length>0">
+    {{mensagem}}
 </div>
 
 <div class="row">
         <div class="col">           
-            <label class="form-label">email:</label>
-            <input type="email" id="txtEmail" class="form-control">
-            <label class="form-label">senha:</label>
-            <input type="password" id="txtSenha" class="form-control"><br>
+            <label class="form-label" >email:</label>
+            <input type="email" id="txtEmail" name="email" class="form-control" [(ngModel)]="obj.email"><br>
+            <label class="form-label" for="txtSenha">senha:</label>
+            <input type="password" id="txtSenha" name="senha" class="form-control" [(ngModel)]="obj.senha"><br>
             <button class="btn btn-outline-success w-100" >Entrar</button>
         </div>
         <div class="col">
