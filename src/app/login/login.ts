@@ -14,8 +14,8 @@ export class Login {
   obj: Cliente = new Cliente();
 
   gravar(){
-    this.mensagem = "Seu cadastro foi realizado com sucesso!";
+    this.mensagem = "Seu Login foi realizado com sucesso!";
     let json = JSON.stringify(this.obj);
-    localStorage.setItem("cadastro", json);
+    localStorage.setItem("login", json);
   }
 }
