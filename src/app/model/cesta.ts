@@ -44,6 +44,11 @@ export class Cesta {
         this.calculaTotal(); // Atualiza o total antes de guardar       
     }
 
+    public removerItem(codigo: number): void {
+        this.itens = this.itens.filter(item => item.produto.codigo !== codigo);
+        this.calculaTotal();
+    }
+
     public calculaItem(itm: ItemCesta):number{
         let valor=0;
         if(itm.produto.valorPromo > 0 ){
