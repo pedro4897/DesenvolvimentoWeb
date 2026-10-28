@@ -17,7 +17,7 @@
             <td><b>{{obj.produto.nome}}</b><br>{{obj.produto.descritivo}}</td>
             <td>{{obj.qtd}}</td>
             <td>{{obj.valorTotal| currency:'BRL'}}</td>
-            <td><button class="btn btn-danger" (click)="removerItem(obj.produto.codigo)">x</button></td>
+            <td><button class="btn btn-danger">x</button></td>
         </tr>
     </tbody>
     <tfoot>
@@ -32,3 +32,4 @@
 <button class="btn btn-outline-danger" (click)="limpar();">limpar cesta</button>&nbsp;
 <button  class="btn btn-outline-info">continuar comprando</button>&nbsp; 
 <button  class="btn btn-outline-success">gravar pedido</button>&nbsp;
+

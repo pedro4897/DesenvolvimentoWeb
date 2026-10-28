@@ -16,17 +16,11 @@ export class CestaDetalhe {
   ngOnInit(){
     let json = localStorage.getItem("cesta");
     if(json!=null){
-      this.cesta = new Cesta(json);
+      this.cesta = JSON.parse(json);
       this.mensagem = "";
     } else {
       this.mensagem = "Sua cesta esta vazia!";
     }
-  }
-
-  removerItem(codigo: number): void {
-    this.cesta.removerItem(codigo);
-    localStorage.setItem("cesta", JSON.stringify(this.cesta));
-    this.mensagem = this.cesta.itens.length === 0 ? "Sua cesta esta vazia!" : "";
   }
 
 
